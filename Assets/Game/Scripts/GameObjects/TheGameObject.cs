@@ -7,11 +7,12 @@ using UnityEngine;
 public class TheGameObject : MonoBehaviour
 {
 
-    private BoxCollider2D boxCollider;   //Box collider which detects collision
-    private Collider2D[] colliders;   // Contains all collider which are collided with
+    protected BoxCollider2D boxCollider;   //Box collider which detects collision
+    protected Collider2D[] colliders;   // Contains all collider which are collided with
     private Animator anim; // Point to the Animator
+    protected ContactFilter2D obstacleFilter; // Filter der Kollisionsobjekte als Hindernisse findet (Trigger werden ignoriert)
 
-    private void Awake()
+    protected virtual void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         colliders = new Collider2D[10];
@@ -19,6 +20,7 @@ public class TheGameObject : MonoBehaviour
         //Caps the FPS at 30, so the player does not move too fast
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 30;
+        obstacleFilter = new ContactFilter2D();
     }
 
 
@@ -47,7 +49,7 @@ public class TheGameObject : MonoBehaviour
         {
             anim.SetFloat("lookAt", 2f);
         }
-        else if(change.x >= 1f)
+        else if (change.x >= 1f)
         {
             anim.SetFloat("lookAt", 3f);
         }
@@ -76,7 +78,7 @@ public class TheGameObject : MonoBehaviour
     protected bool IsColliding()
     {
 
-        return (boxCollider.OverlapCollider(new ContactFilter2D(), colliders) > 0);
+        return (boxCollider.OverlapCollider(obstacleFilter, colliders) > 0);
 
     }
 }
