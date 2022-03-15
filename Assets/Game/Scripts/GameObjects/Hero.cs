@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -5,6 +6,14 @@ using UnityEngine;
 public class Hero : TheGameObject
 {
     private ContactFilter2D triggerContactFilter;
+
+
+    //Sprites für den Charakter für verschiedene Skins
+    [SerializeField] private RuntimeAnimatorController emptySkin;
+    [SerializeField] private RuntimeAnimatorController shieldSkin;
+
+
+
     protected override void Awake()
     {
         base.Awake();
@@ -26,10 +35,22 @@ public class Hero : TheGameObject
                 }
             }
         }
+
+        //Checkt welchen Skin ausgerüstet werden soll
+        if (SaveGameData.current.inventory.shield)
+        {
+            anim.runtimeAnimatorController = shieldSkin;
+        }
+        else
+        {
+            anim.runtimeAnimatorController = emptySkin;
+        }
     }
 
-
-
-
-
+    //Reaktion auf Aktiontastendruck
+    public void performAction()
+    {
+        Sword sword = GetComponentInChildren<Sword>();
+        sword.Stroke();
+    }
 }

@@ -34,5 +34,9 @@ public class HeroInputController : MonoBehaviour
         {
             hero.change.x = -1;
         }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            hero.performAction();
+        }
     }
 }

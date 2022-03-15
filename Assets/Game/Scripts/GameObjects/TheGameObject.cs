@@ -9,7 +9,7 @@ public class TheGameObject : MonoBehaviour
 
     protected BoxCollider2D boxCollider;   //Box collider which detects collision
     protected Collider2D[] colliders;   // Contains all collider which are collided with
-    private Animator anim; // Point to the Animator
+    protected Animator anim; // Point to the Animator
     protected ContactFilter2D obstacleFilter; // Filter der Kollisionsobjekte als Hindernisse findet (Trigger werden ignoriert)
 
     protected virtual void Awake()
