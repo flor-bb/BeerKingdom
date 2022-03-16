@@ -36,7 +36,7 @@ public class HeroInputController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            hero.performAction();
+            hero.PerformAction();
         }
     }
 }

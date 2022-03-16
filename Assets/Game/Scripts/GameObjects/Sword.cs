@@ -11,11 +11,18 @@ public class Sword : MonoBehaviour
     //Zeigt auf den Animator der Figur um die Laufrichtung zu ermitteln
     //Parameter lookAt muss die Richtung enthalten
     [SerializeField] private Animator characterAnimator;
+    [SerializeField] private CollisionDetector collisionDetector; //Zeiger auf das Helferskript CollisionDetector
 
 
     protected void Start()
     {
         SetVisible(false);
+        collisionDetector.WhenCollisionDetected = OnCollisionDetected;
+    }
+
+    private void OnCollisionDetected(Collider2D collider)
+    {
+        Debug.Log("Kling hat getroffen: " + collider);
     }
 
     //Wird ausgeführt wenn das Schwert enabled wird
@@ -34,28 +41,29 @@ public class Sword : MonoBehaviour
     //Führt einen Schwerschlag aus
     public void Stroke()
     {
+       
         int lookAt = Mathf.RoundToInt(characterAnimator.GetFloat("lookAt")); //Rundet auf Int um floating fehler zu vermeiden
 
         //Parameter um das Schwert zu rotieren
         float scaleX = 1f;
         float rotateZ = 0f;
 
-        if (lookAt == 0)
+        switch (lookAt)
         {
-            rotateZ = 90f;
-        }
-        else if (lookAt == 1)
-        {
-            rotateZ = 0f;
-        }
-        else if (lookAt == 2)
-        {
-            rotateZ = -90f;
-        }
-        else if (lookAt == 3)
-        {
-            rotateZ = 0f;
-            scaleX = -1f;
+            case 0:
+                rotateZ = 90f;
+                break;
+            case 1:
+                rotateZ = 0f;
+                break;
+            case 2:
+                rotateZ = -90f;
+                break;
+            case 3:
+                rotateZ = 0f;
+                scaleX = -1f;
+                break;
+
         }
 
         //Richtet das Schwert aus

@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: af815ef9f4e556544973203d197c8902
+guid: 2bde5ac5bce2b514b961f0860199bb2b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8033092973025764044
-    second: Items_0
+      213: 4296193443984631328
+    second: Bush_0
   - first:
-      213: 4337684191699249041
-    second: Items_1
+      213: -2770932246066905560
+    second: Bush_1
   - first:
-      213: -488721925442295091
-    second: Items_2
+      213: -8304077115233230222
+    second: Bush_2
+  - first:
+      213: -8663683955189347131
+    second: Bush_3
+  - first:
+      213: 8806556967682631439
+    second: Bush_4
+  - first:
+      213: -128224018499578198
+    second: Bush_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,64 +121,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Items_0
+      name: Bush_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc223e07f774b7f60800000000000000
-      internalID: 8033092973025764044
+      spriteID: 026e013dc252f9b30800000000000000
+      internalID: 4296193443984631328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_1
+      name: Bush_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 197af025acc823c30800000000000000
-      internalID: 4337684191699249041
+      spriteID: 82eb180adcbab89d0800000000000000
+      internalID: -2770932246066905560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items_2
+      name: Bush_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dca21188ff5b739f0800000000000000
-      internalID: -488721925442295091
+      spriteID: 272a21f4cddf1cc80800000000000000
+      internalID: -8304077115233230222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc00bc485964c780800000000000000
+      internalID: -8663683955189347131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07e6f827ec273a70800000000000000
+      internalID: 8806556967682631439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6d8ad3fe4783ef0800000000000000
+      internalID: -128224018499578198
       vertices: []
       indices: 
       edges: []

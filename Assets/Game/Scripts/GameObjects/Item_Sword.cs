@@ -4,16 +4,16 @@ using UnityEngine;
 
 
 /// <summary>
-/// Einsammelbares Schild Objekt auf der Karte
+/// Einsammelbares Schwert auf der Karte
 /// </summary>
-public class Item_Shield : Collectible
+public class Item_Sword : Collectible
 {
 
 
     public override void OnCollect()
     {
         base.OnCollect();
-        SaveGameData.current.inventory.shield = true;
+        SaveGameData.current.inventory.sword = true;
         Destroy(gameObject);
     }
 }

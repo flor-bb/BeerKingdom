@@ -12,5 +12,10 @@ public class Inventory
     //Gibt an ob der Charakter den Schild trägt
     public bool shield = false;
 
+    //Gibt an ob der Charakter das Schwert trägt
+    public bool sword = false;
+
+
+
 
 }

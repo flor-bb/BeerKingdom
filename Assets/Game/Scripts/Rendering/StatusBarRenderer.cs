@@ -12,6 +12,7 @@ public class StatusBarRenderer : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI diamondLabel; // Zähler für Diamanten
     [SerializeField] private Image weaponARenderer; //Bild für Waffe auf Platz A
+    [SerializeField] private Image weaponBRenderer; //Bild für Waffe auf Platz A
 
 
     void Start()
@@ -24,6 +25,7 @@ public class StatusBarRenderer : MonoBehaviour
     {
         diamondLabel.text = SaveGameData.current.inventory.diamonds.ToString("D3"); //D3 für 3 Dezimalzahlen
         weaponARenderer.gameObject.SetActive(SaveGameData.current.inventory.shield);
+        weaponBRenderer.gameObject.SetActive(SaveGameData.current.inventory.sword);
 
         
     }
